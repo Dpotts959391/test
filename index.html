@@ -6,14 +6,43 @@
     <title>Mario League - Charity Event</title>
   </head>
   <body>
+    <div class="timer">
+      <h5>Event starts: &nbsp;<span id="timer"></span><br> Kilwinning Campus - Lecture Theatre 5</h5>
+    </div>
     <div class="heading">
         <h1>Mario League</h1>
-        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
-    </div>
+        <h3>Mario League is a gaming event for all to come along and play a range of games on a range of consoles and PCs. Some of the Games that will be available are: Mario Kart 8, Rocket League, and a variety of games for the PC. ~ Including Emulators for other consoles.</h3>
+		<h3>Players donate to be able to play, all donations go to CLIC Sargent - Young Lives vs Cancer. Donations will have a minimum requirement of 50p for 10 minutes of your chosen game. There will also be a Mario Kart 8 gaming Tournament £1 to enter, and could win a £10 game voucher</h3>
+		<h3>The event will take place at Kilwinning Campus on the 9th of May from 12-2pm in the Lecture Theatre 5, There will be an information booth on the main entrance for any equires on the day.</h3>
+   </div>
     <footer>
-              
-      <h5>Contact Us</h5>
+      <a href="http://www.clicsargent.org.uk/"><h3>CLIC Sargent</h3></a>
+  	  <a href="http://www.clicsargent.org.uk/"><h5>For any information about the charity, Click here to visit their website.</h5></a>
+  	  <h4>Contact Us</h4>
+      <h5>Kilwinning Campus</h5>
+      <h5>Lauchlan Way</h5>
+      <h5>KA13 6DE</h5>
+	  <a href="http://www1.ayrshire.ac.uk/"><h5>Aryshire Collage site</h5></a>
 
     </footer>
+    <script type="text/javascript">
+      var countDownDate = new Date("May 9. 2017 12:00:00").getTime();
+
+      var x = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("timer").innerHTML = "EXPIRED";
+        }
+      }, 1000);
+    </script>
   </body>
 </html>
